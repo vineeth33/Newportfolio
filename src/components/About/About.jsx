@@ -79,7 +79,7 @@ export const About = () => {
             </div>
             <h3 className={styles.cardSubtitle}>Education</h3>
             <p className={styles.cardSmallText}>
-              Computer Science Student with focus on software engineering and modern development practices.
+              CS undergrad at SSN with an interest in scalable systems, clean architecture, and modern development pipelines.
             </p>
           </div>
 
