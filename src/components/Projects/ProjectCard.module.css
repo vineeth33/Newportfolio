@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(34, 0, 51, 0.6), rgba(20, 0, 30, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Space Grotesk', sans-serif;
+  backdrop-filter: blur(16px);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 0 15px 30px rgba(157, 78, 221, 0.4), 0 0 0 1px rgba(255, 0, 150, 0.3);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a1a2a 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.95) contrast(1.1);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.card:hover .imageOverlay {
+  opacity: 1;
+}
+
+.quickActions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.quickAction {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quickAction:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 0, 150, 0.3);
+}
+
+.actionIcon {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #0e0e1b;
+  color: #e8e8e8;
+  flex-grow: 1;
+}
+
+.titleSection {
+  position: relative;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.titleGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.25), transparent);
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #f0f0f0;
+}
+
+.skillMore {
+  font-size: 0.85rem;
+  color: #b084cc;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  position: relative;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #9d4edd, #6c63ff);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.4);
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 1px solid #9d4edd;
+  color: #b084cc;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(157, 78, 221, 0.5);
+}
+
+.btnText {
+  z-index: 2;
+}
+
+.btnShine {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+
+.primaryBtn:hover .btnShine {
+  left: 120%;
+}
+
+.btnIcon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}

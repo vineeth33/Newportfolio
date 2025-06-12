@@ -1,0 +1,244 @@
+.experience {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 5rem 0;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.sectionTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #e100ff, transparent);
+  border-radius: 2px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skillCard:hover {
+  background: rgba(140, 0, 255, 0.05);
+  border-color: rgba(140, 0, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(140, 0, 255, 0.1);
+}
+
+.skillIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.skillIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #e100ff, transparent);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: -0.5rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background: #e100ff;
+  border-radius: 50%;
+  border: 3px solid #0f0f0f;
+  box-shadow: 0 0 0 3px rgba(225, 0, 255, 0.3);
+}
+
+.timelineContent {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.timelineContent:hover {
+  background: rgba(140, 0, 255, 0.02);
+  border-color: rgba(140, 0, 255, 0.2);
+}
+
+.timelineHeader {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.companyLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+}
+
+.timelineInfo {
+  flex: 1;
+}
+
+.role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e100ff;
+  margin: 0 0 0.5rem 0;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #e100ff;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timelineItem {
+    padding-left: 1.5rem;
+  }
+}

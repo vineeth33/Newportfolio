@@ -1,0 +1,242 @@
+.contact {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0a0a0a;
+}
+
+
+
+.backgroundPattern {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    /* Subtle grid-like texture for depth */
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    /* Soft radial glows for a futuristic effect */
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(23, 11, 33, 0.15) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(44, 11, 48, 0.15) 0%,
+      transparent 60%
+    ),
+    /* Diagonal neon streaks for dynamic energy */
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(43, 17, 64, 0.1) 50%,
+      transparent 60%
+    ),
+    /* Base dark background */
+    #0a0a0a;
+  background-size: 40px 40px, 40px 40px, 100%, 100%, 100%, 100%;
+  z-index: 1;
+  animation: subtleShift 20s linear infinite;
+}
+
+/* Animation for a slow, immersive movement */
+@keyframes subtleShift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: #d1b3ff;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contactCard {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(140, 0, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contactCard:hover {
+  border-color: rgba(225, 0, 255, 0.5);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  color: #e100ff;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  font-size: 0.9rem;
+  color: #d1b3ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cardLink:hover {
+  color: #e100ff;
+}
+
+.socialSection {
+  text-align: center;
+}
+
+.socialTitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: rgba(225, 0, 255, 0.2);
+  color: #e100ff;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(225, 0, 255, 0.2);
+}
+
+.ctaButton a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
