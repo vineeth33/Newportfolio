@@ -76,7 +76,7 @@ export const Hero = () => {
     setTimeout(() => {
       gsap.to(nameRef.current, {
         text: "VINEETH UMMADISETTY",
-        duration: 2,
+        duration: 1.5,
         ease: "none"
       });
     }, 1500);
@@ -113,6 +113,14 @@ export const Hero = () => {
           <button className={styles.primaryBtn}>
             Let's Work Together
           </button>
+          <a
+            href="/assets/hero/vineeth-04.pdf"
+            className={styles.secondaryBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume
+          </a>
         </div>
       </div>
 

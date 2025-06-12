@@ -203,3 +203,93 @@
   }
 }
 
+.secondaryBtn {
+  position: relative;
+  margin-top: 1rem;
+  padding: 0.75rem 1.75rem;
+  background-color: rgba(30, 20, 40, 0.3); /* Dark purple with transparency */
+  border: 2px solid transparent; /* Start with transparent border */
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e9e9ff; /* Light purple-white */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(128, 90, 213, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Gradient border effect */
+.secondaryBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* Border width */
+  background: linear-gradient(135deg, #8b5cf6, #c026d3, #4f46e5);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Hover state */
+.secondaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(128, 90, 213, 0.3);
+  background-color: rgba(40, 30, 60, 0.6);
+  color: #ffffff;
+}
+
+/* Shine effect on hover */
+.secondaryBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.secondaryBtn:hover::after {
+  left: 100%;
+}
+
+/* Active state */
+.secondaryBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(128, 90, 213, 0.2);
+}
+
+/* Focus state for accessibility */
+.secondaryBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
+}
+
+/* Optional: Add an icon space if needed */
+.secondaryBtn svg {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.secondaryBtn:hover svg {
+  transform: translateX(3px);
+}
