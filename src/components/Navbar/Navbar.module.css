@@ -49,7 +49,7 @@
 }
 
 .logo:hover .logoText {
-  color: #00ffff;
+  color: #8f17e0;
 }
 
 .logo:hover .logoDot {
@@ -69,7 +69,7 @@
 }
 
 .menuBtn:hover {
-  color: #00ffff;
+  color: #8800ff;
   background-color: rgba(0, 255, 255, 0.1);
 }
 
@@ -105,12 +105,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #00ffff;
+  background: #9900ff;
   transition: width 0.3s ease;
 }
 
 .menuItems a:hover {
-  color: #00ffff;
+  color: #9500ff;
 }
 
 .menuItems a:hover::after {
