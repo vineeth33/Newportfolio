@@ -114,7 +114,7 @@ export const Hero = () => {
             Let's Work Together
           </button>
           <a
-            href="/assets/hero/vineeth-07.pdf"
+            href="/vineeth-07.pdf"
             className={styles.secondaryBtn}
             target="_blank"
             rel="noopener noreferrer"
