@@ -1,5 +1,4 @@
-
-.hero { 
+.hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -19,8 +18,10 @@
   width: 100%;
   height: 200px;
   background: linear-gradient(to bottom, transparent, #0a0a0a 80%);
-  z-index: 1; /* Above background but below content */
-  pointer-events: none; /* Allow interaction with content */
+  z-index: 1;
+  /* Above background but below content */
+  pointer-events: none;
+  /* Allow interaction with content */
 }
 
 .backgroundPattern {
@@ -29,36 +30,26 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: 
+  background:
     /* Subtle grid-like texture for depth */
-    linear-gradient(
-      to right,
+    linear-gradient(to right,
       rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
+      transparent 1px),
+    linear-gradient(to bottom,
       rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px
-    ),
+      transparent 1px),
     /* Soft radial glows for a futuristic effect */
-    radial-gradient(
-      circle at 30% 20%,
+    radial-gradient(circle at 30% 20%,
       rgba(140, 0, 255, 0.15) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 70% 80%,
+      transparent 60%),
+    radial-gradient(circle at 70% 80%,
       rgba(225, 0, 255, 0.15) 0%,
-      transparent 60%
-    ),
+      transparent 60%),
     /* Diagonal neon streaks for dynamic energy */
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       transparent 40%,
       rgba(140, 0, 255, 0.1) 50%,
-      transparent 60%
-    ),
+      transparent 60%),
     /* Base dark background */
     #0a0a0a;
   background-size: 40px 40px, 40px 40px, 100%, 100%, 100%, 100%;
@@ -71,6 +62,7 @@
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(-20px, -20px);
   }
@@ -105,13 +97,14 @@
   font-weight: 900;
   line-height: 0.9;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+  background: linear-gradient(135deg, #9000ff 0%, #ff00fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
   min-height: 1em;
 }
+
 .role {
   font-size: clamp(1.5rem, 4vw, 3rem);
   color: #d1b3ff;
@@ -219,8 +212,10 @@
   position: relative;
   margin-top: 1rem;
   padding: 0.75rem 1.75rem;
-  background-color: rgba(30, 20, 40, 0.3); /* Dark purple with transparency */
-  border: 2px solid transparent; /* Start with transparent border */
+  background-color: rgba(30, 20, 40, 0.3);
+  /* Dark purple with transparency */
+  border: 2px solid transparent;
+  /* Start with transparent border */
   border-radius: 12px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -229,7 +224,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #e9e9ff; /* Light purple-white */
+  color: #e9e9ff;
+  /* Light purple-white */
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(128, 90, 213, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -244,10 +240,11 @@
   position: absolute;
   inset: 0;
   border-radius: 12px;
-  padding: 2px; /* Border width */
+  padding: 2px;
+  /* Border width */
   background: linear-gradient(135deg, #8b5cf6, #c026d3, #4f46e5);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -270,12 +267,10 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   transition: 0.5s;
   z-index: -1;
 }

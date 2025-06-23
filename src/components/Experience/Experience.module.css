@@ -1,6 +1,6 @@
 .experience {
   min-height: 100vh;
-  background: 
+  background:
     linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     radial-gradient(circle at 50% 50%, rgba(140, 0, 255, 0.1) 0%, transparent 70%),
@@ -14,9 +14,15 @@
 }
 
 @keyframes gentleDrift {
-  0% { background-position: 0 0, 0 0, 50% 50%; }
-  100% { background-position: -15px -15px, -15px -15px, 50% 50%; }
+  0% {
+    background-position: 0 0, 0 0, 50% 50%;
+  }
+
+  100% {
+    background-position: -15px -15px, -15px -15px, 50% 50%;
+  }
 }
+
 /* Top intersection overlay (blending from about) */
 .experience::before {
   content: '';
@@ -26,7 +32,8 @@
   width: 100%;
   height: 100px;
   background: linear-gradient(to top, transparent, #0a0a0a 80%);
-  z-index: 1; /* Above background, below content */
+  z-index: 1;
+  /* Above background, below content */
   pointer-events: none;
 }
 
@@ -38,14 +45,20 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to bottom, transparent,#0a0a0a 80%);
-  z-index: 1; /* Above background, below content */
+  background: linear-gradient(to bottom, transparent, #0a0a0a 80%);
+  z-index: 1;
+  /* Above background, below content */
   pointer-events: none;
 }
 
 @keyframes gentleDrift {
-  0% { background-position: 0 0, 0 0, 50% 50%; }
-  100% { background-position: -15px -15px, -15px -15px, 50% 50%; }
+  0% {
+    background-position: 0 0, 0 0, 50% 50%;
+  }
+
+  100% {
+    background-position: -15px -15px, -15px -15px, 50% 50%;
+  }
 }
 
 .container {
@@ -59,10 +72,31 @@
   font-weight: 900;
   text-align: center;
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%);
+  background: linear-gradient(135deg,
+      #ff0080 0%,
+      #ff4081 25%,
+      #00bfff 50%,
+      #8207f5 75%,
+      #ff1493 100%);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 128, 0.3));
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .content {
