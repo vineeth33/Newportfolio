@@ -29,19 +29,19 @@ export const Hero = () => {
     tl.to(textRef.current, {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 0.5,
       ease: "power3.out"
     })
       .to(nameRef.current, {
         opacity: 1,
         y: 0,
-        duration: 1.2,
+        duration: 0.5,
         ease: "power3.out"
       }, "-=0.7")
       .to(roleRef.current, {
         opacity: 1,
         y: 0,
-        duration: 1,
+        duration: 0.5,
         ease: "power3.out"
       }, "-=0.8")
       .to(ctaRef.current, {
@@ -76,7 +76,7 @@ export const Hero = () => {
     setTimeout(() => {
       gsap.to(nameRef.current, {
         text: "VINEETH UMMADISETTY",
-        duration: 1.5,
+        duration: 1,
         ease: "none"
       });
     }, 1500);

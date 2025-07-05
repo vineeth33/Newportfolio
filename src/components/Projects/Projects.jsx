@@ -25,7 +25,7 @@ export const Projects = () => {
     // Set initial states
     gsap.set(title, { opacity: 0, y: 80, rotationX: 30 });
     gsap.set(subtitle, { opacity: 0, y: 40 });
-    gsap.set(cards, { opacity: 0, y: 120, rotationY: 15, scale: 0.7 });
+    gsap.set(cards, { opacity: 0, y: 120 });
     gsap.set(glow, { opacity: 0, scale: 0.5 });
 
     // Floating glow animation
@@ -42,38 +42,36 @@ export const Projects = () => {
       start: "top 80%",
       onEnter: () => {
         const tl = gsap.timeline();
-        
+
         tl.to(glow, {
           opacity: 0.6,
           scale: 1,
           duration: 1.5,
           ease: "power2.out"
         })
-        .to(title, {
-          opacity: 1,
-          y: 0,
-          rotationX: 0,
-          duration: 1.2,
-          ease: "back.out(1.7)"
-        }, "-=1")
-        .to(subtitle, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out"
-        }, "-=0.8")
-        .to(cards, {
-          opacity: 1,
-          y: 0,
-          rotationY: 0,
-          scale: 1,
-          stagger: {
-            amount: 0.8,
-            from: "start"
-          },
-          duration: 1,
-          ease: "back.out(1.4)"
-        }, "-=0.4");
+          .to(title, {
+            opacity: 1,
+            y: 0,
+            rotationX: 0,
+            duration: 1.2,
+            ease: "back.out(1.7)"
+          }, "-=1")
+          .to(subtitle, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out"
+          }, "-=0.8")
+          .to(cards, {
+            opacity: 1,
+            y: 0,
+            stagger: {
+              amount: 0.8,
+              from: "start"
+            },
+            duration: 1,
+            ease: "back.out(1.4)"
+          }, "-=0.4");
       }
     });
 
@@ -111,7 +109,7 @@ export const Projects = () => {
   return (
     <section className={styles.projects} ref={containerRef}>
       <div className={styles.floatingGlow} ref={glowRef}></div>
-      
+
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.titleContainer}>

@@ -11,9 +11,9 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    
+
     const tl = gsap.timeline();
-    
+
     tl.to(cardRef.current, {
       y: -15,
       rotationY: 5,
@@ -22,21 +22,21 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
       duration: 0.4,
       ease: "power2.out"
     })
-    .to(imageRef.current, {
-      scale: 1.1,
-      duration: 0.6,
-      ease: "power2.out"
-    }, 0)
-    .to(contentRef.current, {
-      y: -5,
-      duration: 0.3,
-      ease: "power2.out"
-    }, 0.1);
+      .to(imageRef.current, {
+        scale: 1.1,
+        duration: 0.6,
+        ease: "power2.out"
+      }, 0)
+      .to(contentRef.current, {
+        y: -5,
+        duration: 0.3,
+        ease: "power2.out"
+      }, 0.1);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    
+
     gsap.to(cardRef.current, {
       y: 0,
       rotationY: 0,
@@ -45,13 +45,13 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
       duration: 0.4,
       ease: "power2.out"
     });
-    
+
     gsap.to(imageRef.current, {
       scale: 1,
       duration: 0.4,
       ease: "power2.out"
     });
-    
+
     gsap.to(contentRef.current, {
       y: 0,
       duration: 0.3,
@@ -61,16 +61,16 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
 
   const handleMouseMove = (e) => {
     if (!cardRef.current) return;
-    
+
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
+
     const rotateX = (y - centerY) / 10;
     const rotateY = (centerX - x) / 10;
-    
+
     gsap.to(cardRef.current, {
       rotationX: rotateX,
       rotationY: rotateY,
@@ -80,7 +80,7 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
   };
 
   return (
-    <div 
+    <div
       className={`${styles.card} ${isHovered ? styles.hovered : ''}`}
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
@@ -88,7 +88,7 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
       onMouseMove={handleMouseMove}
     >
       <div className={styles.cardGlow}></div>
-      
+
       <div className={styles.imageContainer}>
         <img
           ref={imageRef}
@@ -148,7 +148,7 @@ export const ProjectCard = ({ project: { title, imageSrc, description, skills, d
           <h3 className={styles.title}>{title}</h3>
           <div className={styles.titleGlow}></div>
         </div>
-        
+
         <p className={styles.description}>{description}</p>
 
         <div className={styles.skills}>

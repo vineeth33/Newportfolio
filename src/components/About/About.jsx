@@ -23,7 +23,7 @@ export const About = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.8,
+          duration: 0.3,
           stagger: 0.2,
           ease: "back.out(1.7)"
         });
@@ -40,7 +40,7 @@ export const About = () => {
             ease: "power2.out"
           });
         });
-        
+
         card.addEventListener('mouseleave', () => {
           gsap.to(card, {
             y: 0,
@@ -63,7 +63,7 @@ export const About = () => {
     <section className={styles.about} ref={containerRef}>
       <div className={styles.container}>
         <div className={styles.bentoGrid}>
-          
+
           <div className={`${styles.card} ${styles.cardLarge}`} ref={addToRefs}>
             <div className={styles.cardContent}>
               <h2 className={styles.cardTitle}>About Me</h2>

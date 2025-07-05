@@ -1,5 +1,17 @@
 [
   {
+    "title": "WorthIt",
+    "imageSrc": "projects/worthit.png",
+    "description": "A smart Chrome extension that helps shoppers make better purchase decisions using cost-per-use, time-to-afford metrics, and dynamic risk scoring. Includes USD conversion for international users and features a modern, animated UI with feedback and impulse control alerts.",
+    "skills": [
+      "JavaScript",
+      "Chrome Extension",
+      "Manifest"
+    ],
+    "demo": "https://worthit-gamma.vercel.app/",
+    "source": "https://chromewebstore.google.com/detail/worthit-smart-shopping-as/pjejfmpjhkdfbbbmdanfkdbdmighijof?utm_source=item-share-cb"
+  },
+  {
     "title": "CAMS",
     "imageSrc": "projects/cams.png",
     "description": "A campus access management system designed for secure and efficient student check-ins, monitoring, and entry control using RFID integration, real-time data logging, and admin dashboards for enhanced campus security.",
@@ -24,18 +36,18 @@
     "source": "https://github.com/vineeth33/BlockyBlitz"
   },
   {
-  "title": "The Academic PDF Companion",
-  "imageSrc": "projects/APC.png",
-  "description": "A web app that analyzes PDF documents using Google's Gemini API. It features simplified explanations, glossary generation, multilingual support, quizzes, chat-based Q&A, and analysis history with user authentication.",
-  "skills": [
-    "React",
-    "Google Gemini API",
-    "TypeScript",
-    "Babel",
-    "Custom CSS"
-  ],
-  "demo": "https://academic-pdf-companion.vercel.app/",
-  "source": "https://github.com/vineeth33/pdf-companion"
+    "title": "The Academic PDF Companion",
+    "imageSrc": "projects/APC.png",
+    "description": "A web app that analyzes PDF documents using Google's Gemini API. It features simplified explanations, glossary generation, multilingual support, quizzes, chat-based Q&A, and analysis history with user authentication.",
+    "skills": [
+      "React",
+      "Google Gemini API",
+      "TypeScript",
+      "Babel",
+      "Custom CSS"
+    ],
+    "demo": "https://academic-pdf-companion.vercel.app/",
+    "source": "https://github.com/vineeth33/pdf-companion"
   },
   {
     "title": "Dishcovery",
@@ -73,7 +85,6 @@
     "demo": "https://www.example.com/eatease-demo",
     "source": "https://github.com/vineeth33/EatEase"
   },
-  
   {
     "title": "Weatherly",
     "imageSrc": "projects/weatherly.png",
@@ -110,5 +121,4 @@
     "demo": "https://www.example.com/dotsconnect-demo",
     "source": "https://github.com/vineeth33/Dots-and-Connect"
   }
-  
 ]
